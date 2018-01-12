@@ -293,6 +293,14 @@
     <Compile Include="Migrations\201801120611599_Scheme table.Designer.cs">
       <DependentUpon>201801120611599_Scheme table.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201801120922240_Scheme tab.cs" />
+    <Compile Include="Migrations\201801120922240_Scheme tab.Designer.cs">
+      <DependentUpon>201801120922240_Scheme tab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801121119046_Sche.cs" />
+    <Compile Include="Migrations\201801121119046_Sche.Designer.cs">
+      <DependentUpon>201801121119046_Sche.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Products.cs" />
     <Compile Include="Models\ProjectContext.cs" />
@@ -438,6 +446,7 @@
     <Content Include="Views\Primary\Edit.cshtml" />
     <Content Include="Views\Scheme\Index.cshtml" />
     <Content Include="Views\Scheme\Create.cshtml" />
+    <Content Include="Views\Scheme\Edit.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -467,6 +476,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201801120611599_Scheme table.resx">
       <DependentUpon>201801120611599_Scheme table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801120922240_Scheme tab.resx">
+      <DependentUpon>201801120922240_Scheme tab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801121119046_Sche.resx">
+      <DependentUpon>201801121119046_Sche.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

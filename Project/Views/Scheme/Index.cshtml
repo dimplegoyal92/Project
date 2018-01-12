@@ -31,23 +31,26 @@
 
     @foreach (var prod in Model)
     {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => prod.SchemeName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => prod.StartDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => prod.EndDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => prod.SchemeType)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => prod.SchemeLevel)
-            </td>
-        </tr>
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => prod.SchemeName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => prod.StartDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => prod.EndDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => prod.SchemeType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => prod.SchemeLevel)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = prod.SchemeId })
+        </td>
+    </tr>
     }
 
 </table>

@@ -68,6 +68,6 @@ namespace Project.Models
         [Required]
 
         public string SchemeType { get; set; }
-        public List<int> SchemeLevel { get; set; }
+        public string SchemeLevel { get; set; }
     }
 }
