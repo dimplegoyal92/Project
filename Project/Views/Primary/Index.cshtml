@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Project.Models.PrimaryCategory>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model=>model.PrimaryCategoryId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PrimaryCategoryName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SchemeId)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var prod in Model)
+    {
+    <tr>
+
+        <td>
+            @Html.DisplayFor(modelItem => prod.PrimaryCategoryId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => prod.PrimaryCategoryName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => prod.SchemeId)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = prod.PrimaryCategoryId }) |
+            @Html.ActionLink("ChangeScheme", "ChangeScheme", new { id = prod.SchemeId }) |
+            @Html.ActionLink("Delete", "Delete", new { id = prod.PrimaryCategoryId })
+        </td>
+    </tr>
+    }
+
+</table>
