@@ -39,7 +39,7 @@ namespace Project.Controllers
                    .Where(x => x.Value.Errors.Count > 0)
                    .Select(x => new { x.Key, x.Value.Errors })
                    .ToArray();
-                return View("Index");
+                return View();
             }
         }
         public ActionResult Edit(int id)
@@ -60,7 +60,7 @@ namespace Project.Controllers
                 return RedirectToAction("Index");
             }
             else
-                return View("Index");
+                return View();
         }
 
         public ActionResult Delete(int id, SubCategory sc)

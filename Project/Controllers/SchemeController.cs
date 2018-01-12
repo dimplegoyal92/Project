@@ -29,9 +29,16 @@ namespace Project.Controllers
         {
             try
             {
-                projectContext.Schemes.Add(sc);
-                projectContext.SaveChanges();
-                return RedirectToAction("Index");
+                if (ModelState.IsValid)
+                {
+                    projectContext.Schemes.Add(sc);
+                    projectContext.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+                else
+                {
+                    return View();
+                }
             }
             catch(Exception ex)
             {
@@ -61,7 +68,7 @@ namespace Project.Controllers
                     .Where(x => x.Value.Errors.Count > 0)
                     .Select(x => new { x.Key, x.Value.Errors })
                     .ToArray();
-                return View("Index");
+                return View();
             }
         }
 

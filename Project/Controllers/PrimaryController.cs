@@ -35,7 +35,7 @@ namespace Project.Controllers
             }
             else
             {
-                return View("Index");
+                return View();
             }
         }
         public ActionResult Edit()
@@ -55,7 +55,7 @@ namespace Project.Controllers
             }
             else
             {
-                return View("Index");
+                return View();
             }
         }
 

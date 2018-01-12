@@ -45,7 +45,7 @@ namespace Project.Controllers
                     .Where(x => x.Value.Errors.Count > 0)
                     .Select(x => new { x.Key, x.Value.Errors })
                     .ToArray();
-                return View("Index");
+                return View();
             }
         }
 
@@ -70,7 +70,7 @@ namespace Project.Controllers
             }
             else
             {
-                return View("Index");
+                return View();
             }
         }
         public ActionResult Delete(int id, Products product)

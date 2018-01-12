@@ -301,6 +301,10 @@
     <Compile Include="Migrations\201801121119046_Sche.Designer.cs">
       <DependentUpon>201801121119046_Sche.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201801121244378_validations.cs" />
+    <Compile Include="Migrations\201801121244378_validations.Designer.cs">
+      <DependentUpon>201801121244378_validations.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Products.cs" />
     <Compile Include="Models\ProjectContext.cs" />
@@ -482,6 +486,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201801121119046_Sche.resx">
       <DependentUpon>201801121119046_Sche.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801121244378_validations.resx">
+      <DependentUpon>201801121244378_validations.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
