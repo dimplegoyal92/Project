@@ -29,11 +29,7 @@ namespace Project.Models
         public int? SchemeId { get; set; }
         [Range(0, int.MaxValue, ErrorMessage = "Please enter valid integer Number")]
         public int? Quantity { get; set; }
-        [Range(0, int.MaxValue, ErrorMessage = "Please enter valid integer Number")]
-
-        public int? OrderQuantityDuringScheme { get; set; }
-        [Range(0, int.MaxValue, ErrorMessage = "Please enter valid integer Number")]
-        public int? OrderQuantityNoScheme { get; set; }
+       
 
 
 
@@ -81,5 +77,17 @@ namespace Project.Models
         public string SchemeType { get; set; }
         [RegularExpression(@"^[1-3],([1-9],)+$",ErrorMessage = "enter SchemeLevel in interger seperated by comma(1,1,1,)")]
         public string SchemeLevel { get; set; }
+    }
+
+    public class Orders
+    {
+        [Key]
+        public int OrderId { get; set; }
+        public int OrderQuantityDuringScheme { get; set; }
+        public int OrderQuantityNoScheme { get; set; }
+
+        public int ProductId { get; set; }
+        public int SchemeId { get; set; }
+
     }
 }
